@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentCar - Layanan Penyewaan Kendaraan</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .hero {
+        position: relative;
+        background-image: url('images/background.jpg'); /* Path ke gambar lokal */
+        background-size: cover;
+        background-position: center top 80%;
+        height: 500px;
+        color: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Overlay hitam dengan opacity 50% */
+        z-index: 1;
+    }
+
+    .hero h1, .hero p, .hero a {
+        position: relative;
+        z-index: 2;
+        color: white; /* Warna teks tetap putih */
+    }
+
+    .services {
+      padding: 60px 0;
+    }
+
+    .service-card {
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .footer {
+      background-color: #343a40;
+      color: white;
+      padding: 40px 0;
+    }
+
+    .service-card img {
+        width: 100%; /* Gambar mengambil lebar penuh dari card */
+        height: 200px; /* Tetapkan tinggi yang sama untuk semua gambar */
+        object-fit: cover; /* Pastikan gambar terpotong secara proporsional tanpa distorsi */
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">RentCar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Layanan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Tentang Kami</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Kontak</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Layanan Penyewaan Kendaraan Terpercaya</h1>
+      <p>Berkendara kemana saja dengan nyaman dan bergaya.</p>
+      <a href="#services" class="btn btn-primary btn-lg">Jelajahi Layanan</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Layanan Kami</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card service-card">
+            <img src="images/car.jpg" class="card-img-top" alt="Sewa Mobil">
+            <div class="card-body">
+              <h5 class="card-title">Sewa Mobil</h5>
+              <p class="card-text">Pilih berbagai mobil untuk keperluan pribadi atau bisnis.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card service-card">
+            <img src="images/suv.jpg" class="card-img-top" alt="Sewa SUV">
+            <div class="card-body">
+              <h5 class="card-title">Sewa SUV</h5>
+              <p class="card-text">SUV nyaman dan luas untuk perjalanan jauh atau perjalanan kelompok.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card service-card">
+            <img src="images/truck.jpg" class="card-img-top" alt="Sewa Truk">
+            <div class="card-body">
+              <h5 class="card-title">Sewa Truk</h5>
+              <p class="card-text">Sewa truk untuk tugas berat dan kebutuhan transportasi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Tentang Kami</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <p>RentCar adalah penyedia layanan penyewaan kendaraan terkemuka yang menawarkan berbagai jenis kendaraan untuk keperluan pribadi maupun komersial. Dengan fokus pada kepuasan pelanggan, kami memastikan armada kami terawat dengan baik dan siap untuk perjalanan atau perjalanan bisnis Anda berikutnya.</p>
+        </div>
+        <div class="col-md-6">
+          <p>Misi kami adalah membuat penyewaan kendaraan menjadi mudah, terjangkau, dan dapat diandalkan. Apakah Anda membutuhkan mobil untuk liburan singkat atau truk untuk tugas berat, kami memiliki kendaraan yang tepat untuk Anda. Biarkan kami membantu Anda memulai perjalanan dengan percaya diri.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Kontak Kami</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Nama Anda</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Alamat Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Pesan</label>
+              <textarea class="form-control" id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h5>Hubungi Kami</h5>
+          <p>Alamat: Jl. RentCar No. 123, Kota, Negara</p>
+          <p>Telepon: +123 456 7890</p>
+          <p>Email: info@rentcar.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <p>&copy; 2024 RentCar. Semua Hak Cipta Dilindungi.</p>
+      <p>Ikuti kami di:
+        <a href="#" class="text-white">Facebook</a> | 
+        <a href="#" class="text-white">Instagram</a> | 
+        <a href="#" class="text-white">Twitter</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
